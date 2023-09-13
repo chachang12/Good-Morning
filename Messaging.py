@@ -4,16 +4,16 @@ from twilio.rest import Client
 def sendMessage(body):
     account_sid = "" #Twillio sid.
     auth_token = "" #Twilio authorization token.
-    from_phone_number = "from_phone_number"
-    to_phone_number = "to_phone_number"
+    fromNumber = "" #Twilio purchased phone number. 
+    toNumber = "" #your phone number.
 
     client = Client(account_sid, auth_token)
 
     message = client.messages.create(
 
         body = body,
-        from_ = from_phone_number,
-        to = to_phone_number
+        from_ = fromNumber,
+        to = toNumber
 
     )
     print("text message sent")
